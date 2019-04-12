@@ -146,6 +146,41 @@ section img[class^=col-] {
   border-color: #ac5fd0;
 }
 
+.icons-container {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  height: 450px;
+}
+
+.md-badge {
+  height: 48px;
+  margin: 10px;
+}
+
+.md-badge:hover {
+  height: 60px;
+  transition: ease-in-out 0.5s;
+}
+
+.icon-wrapper {
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  border: 1px solid #9964aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px;
+}
+
+.icons-wrapper {
+  position: relative;
+  left: 1000px;
+  top: 0;
+  transition: "1s ease-in-out";
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -167,29 +202,6 @@ footer {
 
 .social path {
   fill: #ac5fd0;
-}
-
-.icons-container {
-  display: flex;
-  align-items: center;
-  background: #fafafa;
-  height: 450px;
-}
-
-.md-badge {
-  height: 48px;
-  margin: 10px;
-}
-
-.icon-wrapper {
-  height: 96px;
-  width: 96px;
-  border-radius: 50%;
-  border: 1px solid #9964aa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 48px;
 }
 
 .carousel-control-prev-icon,

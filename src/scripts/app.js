@@ -15,11 +15,11 @@ $(".carousel").carousel({
 });
 
 $(document).on({
-  scroll: navFade
+  scroll: handleScroll
 });
 
-// Nav bar fade-in function
-function navFade() {
+function handleScroll() {
+  // navbar fade
   let winTop = $(window).scrollTop();
   switch (true) {
     case winTop < 144:
@@ -36,6 +36,10 @@ function navFade() {
       });
       break;
   }
+  // icons slide in
+  winTop > $("#about").offset().top - 500
+    ? $(".icons-wrapper").css({ transition: ".5s ease-in-out", left: "0" })
+    : $(".icons-wrapper").css({ transition: ".5s ease-in-out", left: "1000" });
 }
 
 //fade in title

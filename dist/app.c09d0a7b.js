@@ -117,79 +117,58 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"scripts/app.js":[function(require,module,exports) {
+console.log("%c  _    _ _____ _____  ______   __  __ ______ _ \n | |  | |_   _|  __ \\|  ____| |  \\/  |  ____| |\n | |__| | | | | |__) | |__    | \\  / | |__  | |\n |  __  | | | |  _  /|  __|   | |\\/| |  __| | |\n | |  | |_| |_| | \\ \\| |____  | |  | | |____|_|\n |_|  |_|_____|_|  \\_\\______| |_|  |_|______(_)                                            \n ", "font-family:monospace");
+$(".carousel").carousel({
+  interval: 6000,
+  pause: "false"
+});
+$(document).on({
+  scroll: handleScroll
+});
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+function handleScroll() {
+  // navbar fade
+  var winTop = $(window).scrollTop();
 
-  return bundleURL;
-}
+  switch (true) {
+    case winTop < 144:
+      $("nav").css({
+        background: (0, 0, 0, 0),
+        transition: ".4s ease-in-out"
+      });
+      $("#menu>li>a").css({
+        background: (0, 0, 0, 0),
+        color: "black"
+      });
+      break;
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    case winTop > 144:
+      $("nav").css({
+        background: "black",
+        transition: ".4s ease-in-out"
+      });
+      break;
+  } // icons slide in
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
 
-  return '/';
-}
+  winTop > $("#about").offset().top - 500 ? $(".icons-wrapper").css({
+    transition: ".5s ease-in-out",
+    left: "0"
+  }) : $(".icons-wrapper").css({
+    transition: ".5s ease-in-out",
+    left: "1000"
+  });
+} //fade in title
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel/src/builtins/bundle-url.js"}],"styles/index.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"/Users/addisonmoore/Google_Drive/_web-projects/takeHomes/rooster-grin/src/assets/hero.jpg":[["hero.316905a1.jpg","assets/hero.jpg"],"assets/hero.jpg"],"/Users/addisonmoore/Google_Drive/_web-projects/takeHomes/rooster-grin/src/assets/banner-1.jpg":[["banner-1.e334a174.jpg","assets/banner-1.jpg"],"assets/banner-1.jpg"],"/Users/addisonmoore/Google_Drive/_web-projects/takeHomes/rooster-grin/src/assets/banner-2.jpg":[["banner-2.807f0f8d.jpg","assets/banner-2.jpg"],"assets/banner-2.jpg"],"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+$(document).ready(function () {
+  $(".title-wrapper").css({
+    transition: "3s ease-in-out",
+    color: "rgba(240, 240, 240, 1)"
+  });
+});
+},{}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +196,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61157" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57598" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -392,5 +371,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/styles.6145e9cd.js.map
+},{}]},{},["../node_modules/parcel/src/builtins/hmr-runtime.js","scripts/app.js"], null)
+//# sourceMappingURL=/app.c09d0a7b.js.map
