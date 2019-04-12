@@ -1,4 +1,13 @@
-console.log("Sanity check");
+console.log(
+  `%c  _    _ _____ _____  ______   __  __ ______ _ 
+ | |  | |_   _|  __ \\|  ____| |  \\/  |  ____| |
+ | |__| | | | | |__) | |__    | \\  / | |__  | |
+ |  __  | | | |  _  /|  __|   | |\\/| |  __| | |
+ | |  | |_| |_| | \\ \\| |____  | |  | | |____|_|
+ |_|  |_|_____|_|  \\_\\______| |_|  |_|______(_)                                            
+ `,
+  "font-family:monospace"
+);
 
 $(".carousel").carousel({
   interval: 6000,
@@ -28,3 +37,11 @@ function navFade() {
       break;
   }
 }
+
+//fade in title
+$(document).ready(function() {
+  $(".title-wrapper").css({
+    transition: "3s ease-in-out",
+    color: "rgba(240, 240, 240, 1)"
+  });
+});

@@ -13,16 +13,20 @@
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/index.css" />
+    <link
+      rel="shortcut icon"
+      href="https://www.roostergrin.com/wp-content/themes/cockerel_s-child/favicon.ico"
+    />
     <title>Rooster Grin Front End Dev Test</title>
   </head>
 
   <body>
     <nav>
       <img src="assets/logo-white.svg" alt="rooster grin logo" />
-      <ul>
-        <li><a>about</a></li>
-        <li><a>contact</a></li>
+      <ul class="nav-menu">
+        <li><a href="#about">about</a></li>
+        <li><a href="#reviews">reviews</a></li>
       </ul>
     </nav>
 
@@ -63,7 +67,7 @@
         </div>
       </section>
 
-      <section class="row align-items-center">
+      <section class="row align-items-center" id="about">
         <article class="col-6 align-self-center">
           <div class="col-lg-8 offset-lg-4 col-sm-10 offset-sm-1">
             <h2 class="section-title">Lorem Ipsum</h2>
@@ -113,6 +117,7 @@
           </div>
         </div>
       </section>
+
       <section class="row banner-2 align-items-center">
         <div class="col-lg-4 offset-lg-7 col-sm-10 offset-sm-1">
           <h2 class="section-title">Lorem Ipsum</h2>
@@ -128,14 +133,15 @@
           </button>
         </div>
       </section>
-      <section class="row align-items-center">
+      <!-- Carousel section begins -->
+      <section class="row align-items-center" id="reviews">
         <article class="col-6 align-self-center">
           <div class="col-lg-8 offset-lg-4 col-sm-10 offset-sm-1">
             <h2 class="section-title">Lorem ipsum dolor amet</h2>
             <p class="rating">★ ★ ★ ★ ★</p>
           </div>
         </article>
-        <div class="col-6">
+        <div class="col-6 carousel-container">
           <div
             id="carouselExampleIndicators"
             class="carousel slide"
@@ -160,36 +166,51 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img
-                  class="d-block w-100"
-                  src="https://images.unsplash.com/photo-1432958576632-8a39f6b97dc7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=6ecedc1e639d8a4b77aa8e85f4962f03"
-                  data-color="lightblue"
-                  alt="First Image"
-                />
-                <div class="carousel-caption d-md-block">
-                  <h5>First Image</h5>
+                <div class="carousel-slide col-lg-8 offset-lg-2">
+                  <div class="slide-content">
+                    <h4 class="slide-title">John Doe 08/012/2019</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, et felis integer. Cras ac,
+                      duis nisl magna est sociis, neque in odio vel, sit
+                      lobortis erat. Fugit quam, ut pede ut ante, in viverra
+                      eros dictum nisl ligula. Lorem ipsum dolor sit amet, et
+                      felis integer. Cras ac, duis nisl magna est sociis, neque
+                      in odio vel, sit lobortis erat. Fugit quam, ut pede ut
+                      ante, in viverra eros dictum nisl ligula.Lorem ipsum dolor
+                      sit amet, et felis integer. Cras ac, duis nisl magna est
+                      sociis, neque in.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="carousel-item">
-                <img
-                  class="d-block w-100"
-                  src="https://images.unsplash.com/photo-1504736038806-94bd1115084e?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3d045bbf1ecc01c4c9ec011ce5c8977d"
-                  data-color="firebrick"
-                  alt="Second Image"
-                />
-                <div class="carousel-caption d-md-block">
-                  <h5>Second Image</h5>
+                <div class="carousel-slide col-lg-8 offset-lg-2">
+                  <div class="slide-content">
+                    <h4 class="slide-title">Jane Doe 08/012/2019</h4>
+                    <p>
+                      Lorem ipsum dolor amet twee williamsburg cray succulents
+                      cardigan intelligentsia man bun direct trade lo-fi jean
+                      shorts butcher thundercats messenger bag woke. Deep v
+                      edison bulb church-key poutine drinking vinegar jianbing
+                      master cleanse. Brooklyn shaman live-edge shabby chic
+                      irony farm-to-table.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div class="carousel-item">
-                <img
-                  class="d-block w-100"
-                  src="https://images.unsplash.com/photo-1419064642531-e575728395f2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=76d5c793e4f8d02d7a9be27bc71256f7"
-                  data-color="violet"
-                  alt="Third Image"
-                />
-                <div class="carousel-caption d-md-block">
-                  <h5>Third Image</h5>
+                <div class="carousel-slide col-lg-8 offset-lg-2">
+                  <div class="slide-content">
+                    <h4 class="slide-title">Addison Moore 08/012/2019</h4>
+                    <p>
+                      Lorem ipsum dolor amet twee williamsburg cray succulents
+                      cardigan intelligentsia man bun direct trade lo-fi jean
+                      shorts butcher thundercats messenger bag woke. Deep v
+                      edison bulb church-key poutine drinking vinegar jianbing
+                      master cleanse. Brooklyn shaman live-edge shabby chic
+                      irony farm-to-table.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

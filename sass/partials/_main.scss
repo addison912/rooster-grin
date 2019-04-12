@@ -18,6 +18,18 @@ li {
   margin: 0 12px;
   a {
     width: 100%;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  a:focus {
+    width: 100%;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  a:hover {
+    color: #aaa;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
   }
 }
 

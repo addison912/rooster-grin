@@ -16,11 +16,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: rgba(240, 240, 240, 0);
 }
 
 .title {
   font-family: "Raleway", sans-serif;
-  color: whitesmoke;
   font-weight: bold;
   font-size: 8vh;
   text-transform: uppercase;
@@ -31,7 +31,6 @@
 .subtitle {
   font-family: $primary-font;
   text-transform: uppercase;
-  color: whitesmoke;
   margin: 12px 0;
   font-size: 4vh;
   letter-spacing: 0.1em;
