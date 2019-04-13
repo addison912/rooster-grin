@@ -76,6 +76,7 @@ nav img {
 
 body {
   margin: 0;
+  min-width: 350px;
 }
 
 p {
@@ -216,6 +217,17 @@ section img[class^=col-] {
 
   .reviews {
     align-items: center;
+    justify-content: center;
+  }
+
+  .md-badge:hover {
+    height: 48px;
+  }
+
+  .icon-wrapper {
+    height: 64px;
+    width: 64px;
+    margin: 32px;
   }
 }
 footer {
