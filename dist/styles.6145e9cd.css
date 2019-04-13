@@ -119,6 +119,11 @@ section {
 }
 section article[class^=col-] {
   align-items: center;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 section img[class^=col-] {
   padding: 0;
@@ -159,6 +164,7 @@ section img[class^=col-] {
 .icons-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: #fafafa;
   height: 450px;
   overflow: hidden;
@@ -192,6 +198,26 @@ section img[class^=col-] {
   transition: "1s ease-in-out";
 }
 
+.reviews {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .icons-wrapper {
+    justify-content: center;
+  }
+
+  .icons-container {
+    justify-content: center;
+  }
+
+  .reviews {
+    align-items: center;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -231,7 +257,7 @@ footer {
 }
 
 .carousel-item {
-  height: 400px;
+  height: 360px;
 }
 
 .slide-title {
@@ -241,7 +267,7 @@ footer {
 
 .slide-content {
   width: 100%;
-  height: 400px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;

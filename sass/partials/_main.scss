@@ -46,6 +46,11 @@ section {
   background: white;
   article[class^="col-"] {
     align-items: center;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   img[class^="col-"] {
     padding: 0;
@@ -87,6 +92,7 @@ section {
 .icons-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: #fafafa;
   height: 450px;
   overflow: hidden;
@@ -118,4 +124,23 @@ section {
   left: 1000px;
   top: 0;
   transition: "1s ease-in-out";
+}
+
+.reviews {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .icons-wrapper {
+    justify-content: center;
+  }
+  .icons-container {
+    justify-content: center;
+  }
+  .reviews {
+    align-items: center;
+  }
 }
