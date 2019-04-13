@@ -48,6 +48,7 @@ nav img {
   font-weight: bold;
   font-size: 8vh;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.3em;
   margin: 0;
 }
@@ -60,6 +61,15 @@ nav img {
   letter-spacing: 0.1em;
 }
 
+@media only screen and (max-width: 1000px) {
+  .title {
+    font-size: 3em;
+  }
+
+  .subtitle {
+    font-size: 2em;
+  }
+}
 * {
   box-sizing: border-box;
 }
