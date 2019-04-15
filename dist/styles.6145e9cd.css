@@ -40,7 +40,7 @@ nav img {
   position: fixed;
   top: 0;
   margin: 0;
-  background-image: url("/hero.316905a1.jpg");
+  background-image: url("/c41cfd5126cd68968166be4b316905a1.jpg");
 }
 
 .title-wrapper {
@@ -150,14 +150,14 @@ section img[class^=col-] {
   height: 450px;
   background-position: center;
   background-size: cover;
-  background-image: url("/banner-1.e334a174.jpg");
+  background-image: url("/d7d037f6775a0768bd84165ce334a174.jpg");
 }
 
 .banner-2 {
   height: 450px;
   background-position: center;
   background-size: cover;
-  background-image: url("/banner-2.807f0f8d.jpg");
+  background-image: url("/af2aa0b1685a2cb2cac16659807f0f8d.jpg");
 }
 
 .rating {
@@ -214,6 +214,7 @@ section img[class^=col-] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 36px;
 }
 
 @media only screen and (max-width: 992px) {
